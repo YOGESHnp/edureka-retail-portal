@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('industry_grade project i - java project_qej_5zeqqnmg/ABC Technologies') {
+                dir('industry_grade project i - java project_qej_5zeqqnmg/ABC Technologies/') {
                     sh 'ls -l'
                     sh 'mvn compile'
                 }
