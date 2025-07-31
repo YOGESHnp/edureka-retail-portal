@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                dir('industry_grade project i - java project_qej_5zeqqnmg/Industry Grade Project I - Java Project/ABC Technologies') {
+                dir('industry_grade project i - java project_qej_5zeqqnmg/ABC Technologies') {
                     sh 'mvn test'
                 }
             }
@@ -31,7 +31,7 @@ pipeline {
 
         stage('Package') {
             steps {
-                dir('industry_grade project i - java project_qej_5zeqqnmg/Industry Grade Project I - Java Project/ABC Technologies') {
+                dir('industry_grade project i - java project_qej_5zeqqnmg/ABC Technologies') {
                     sh 'mvn package'
                 }
             }
