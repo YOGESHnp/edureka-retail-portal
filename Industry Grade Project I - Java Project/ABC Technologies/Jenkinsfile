@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'M3'  // Name should match the Maven installation under "Global Tool Configuration"
+        maven 'M3'  // This must match the Maven name configured in Jenkins
     }
 
     stages {
@@ -12,21 +12,27 @@ pipeline {
             }
         }
 
-        stage('Compile') {
+        stage('Build') {
             steps {
-                sh 'mvn compile'
+                dir('industry_grade project i - java project_qej_5zeqqnmg/Industry Grade Project I - Java Project/ABC Technologies') {
+                    sh 'mvn compile'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                dir('industry_grade project i - java project_qej_5zeqqnmg/Industry Grade Project I - Java Project/ABC Technologies') {
+                    sh 'mvn test'
+                }
             }
         }
 
         stage('Package') {
             steps {
-                sh 'mvn package'
+                dir('industry_grade project i - java project_qej_5zeqqnmg/Industry Grade Project I - Java Project/ABC Technologies') {
+                    sh 'mvn package'
+                }
             }
         }
     }
