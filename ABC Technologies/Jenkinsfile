@@ -42,4 +42,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            archiveArtifacts artifacts: 'ABC Technologies/target/*.war', fingerprint: true
+        }
+    }
+
 }
